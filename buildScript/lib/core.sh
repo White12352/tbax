@@ -1,6 +1,7 @@
 #!/bin/bash
 
 buildScript/lib/core/init.sh
+cd ..
 ls -la
 git clone -b dev-11 https://github.com/White12352/spa spa
 ls -la
@@ -17,4 +18,5 @@ sed -i -e '/ImageShadowTLS             = "ghcr.io\/ihciah\/shadow-tls:latest"/ {
 awk '/ImageShadowTLS,/ {print; print "\tImageShadowsocksR,"; next} 1' sing-box/test/clash_test.go
 sed -i '/berty\.tech\/go-libtor v[0-999]\+\.[0-999]\+\.[0-999]\+ \/\//a \\tgithub.com\/Dreamacro\/clash v1.17.0 // indirect\n\tgithub.com\/Dreamacro\/protobytes v0.0.0-20230617041236-6500a9f4f158 // indirect' sing-box/test/go.mod
 go mod tidy
+cd ../tbax
 buildScript/lib/core/build.sh
