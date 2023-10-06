@@ -11,6 +11,7 @@ rm -rf $BUILD/android \
   $BUILD/javac-output \
   $BUILD/src
 
+ls
 git clone -b dev-11 https://github.com/White12352/spa spa
 ls
 rm -f outbound/shadowsocksr.go
