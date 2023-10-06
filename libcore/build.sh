@@ -25,6 +25,9 @@ sed -i -e '/ImageShadowTLS             = "ghcr.io\/ihciah\/shadow-tls:latest"/ {
 #sed -i '/ImageShadowTLS             = "ghcr.io\/ihciah\/shadow-tls:latest"/a \	\tImageShadowsocksR          = "teddysun\/shadowsocks-r:latest"' ${{ github.workspace }}/tbax/sing-box/test/clash_test.go
 awk '/ImageShadowTLS,/ {print; print "\tImageShadowsocksR,"; next} 1' ${{ github.workspace }}/tbax/sing-box/test/clash_test.go
 sed -i '/berty\.tech\/go-libtor v[0-999]\+\.[0-999]\+\.[0-999]\+ \/\//a \\tgithub.com\/Dreamacro\/clash v1.17.0 // indirect\n\tgithub.com\/Dreamacro\/protobytes v0.0.0-20230617041236-6500a9f4f158 // indirect' ${{ github.workspace }}/tbax/sing-box/test/go.mod
+cd ${{ github.workspace }}/tbax/sing-box
+go mod tidy
+cd ${{ github.workspace }}/tbax
 
 gomobile bind -v -androidapi 21 -cache $(realpath $BUILD) -trimpath -ldflags='-s -w' -tags='with_conntrack,with_gvisor,with_quic,with_wireguard,with_utls,with_clash_api,with_ech,with_shadowsocksr' . || exit 1
 rm -r libcore-sources.jar
