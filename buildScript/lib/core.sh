@@ -14,6 +14,7 @@ go get github.com/codeclysm/extract@v2.2.0+incompatible
 go get github.com/sagernet/sing-tun@v0.1.15-0.20231003035000-3ae726d9f02b
 go get github.com/sagernet/sing@v0.2.13-0.20231001070509-81a98bf16263
 go get github.com/ulikunitz/xz@v0.5.10
+go get golang.org/x/mobile@v0.0.0-20220722155234-aaac322e2105
 go mod tidy
 #cd ../libneko
 #go mod tidy
