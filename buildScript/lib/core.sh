@@ -7,6 +7,22 @@ rm -rf sing-box
 #git clone -b dev-next-yaott https://github.com/CHIZI-0618/sing-box.git sing-box
 git clone -b dev-next https://github.com/SagerNet/sing-box.git sing-box
 svn co https://github.com/MatsuriDayo/sing-box/branches/1.6.a2/nekoutils sing-box/nekoutils
+cd sing-box
+git config --global user.email "you@example.com"
+git config --global user.name "Your Name"
+git remote add MatsuriDayo https://github.com/MatsuriDayo/sing-box
+git fetch MatsuriDayo 1.6.a2
+git clean -f nekoutils/callback.go
+git cherry-pick -x -n 008b4c7
+git cherry-pick -x -n 6ade9e8
+git cherry-pick -x -n 22afd17
+git cherry-pick -x -n fb5c7f6
+git cherry-pick -x -n 9b22789
+git cherry-pick -x -n 66bd740
+git cherry-pick -x -n 89dd568
+git cherry-pick -x -n 7af6671
+git cherry-pick -x -n 762f212
+cd ..
 #sed 's/err = router.Initialize(inbounds, outbounds, func() adapter.Outbound {/err = router.Initialize(inbounds, []adapter.OutboundProvider{func() adapter.Outbound {/' -i sing-box-extra/boxbox/box.go
 #sed 's/})/}}, outbounds, func() adapter.Outbound { return nil })/' -i sing-box-extra/boxbox/box.go
 ls -la
@@ -31,20 +47,6 @@ git clone -b dev https://github.com/SagerNet/sing-quic sing-quic
 cd sing-box/test
 go mod tidy
 cd ..
-git config --global user.email "you@example.com"
-git config --global user.name "Your Name"
-git remote add MatsuriDayo https://github.com/MatsuriDayo/sing-box
-git fetch MatsuriDayo 1.6.a2
-git clean -f nekoutils/callback.go
-git cherry-pick -x -n 008b4c7
-git cherry-pick -x -n 6ade9e8
-git cherry-pick -x -n 22afd17
-git cherry-pick -x -n fb5c7f6
-git cherry-pick -x -n 9b22789
-git cherry-pick -x -n 66bd740
-git cherry-pick -x -n 89dd568
-git cherry-pick -x -n 7af6671
-git cherry-pick -x -n 762f212
 go mod tidy
 cd ../tbax/libcore
 go mod tidy
