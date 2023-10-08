@@ -19,5 +19,9 @@ go get github.com/sagernet/sing-quic@v0.1.2-0.20231001061659-f0ec0e24dd4d
 go mod tidy
 cd ../libneko
 go mod tidy
+cd ../sing-box/test
+go mod tidy
+cd ..
+go mod tidy
 cd ../tbax
 buildScript/lib/core/build.sh
