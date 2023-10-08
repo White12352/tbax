@@ -1,6 +1,6 @@
 #!/bin/bash
 
 buildScript/lib/core/init.sh
-cd sing-box
+cd ../sing-box
 go mod tidy
 buildScript/lib/core/build.sh
