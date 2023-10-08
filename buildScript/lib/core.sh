@@ -5,6 +5,7 @@ cd ..
 ls -la
 git clone -b dev-11 https://github.com/White12352/spa spa
 ls -la
+awk '{gsub("https://github.com/MatsuriDayo/sing-box.git", "https://github.com/PuerNya/sing-box.git")}1' sing-box-extra/libs/get_source.sh > temp && mv -f temp sing-box-extra/libs/get_source.sh
 rm -f sing-box/outbound/shadowsocksr.go
 rm -f sing-box/outbound/shadowsocksr_stub.go
 mv -f spa/.github/outbound/* sing-box/outbound/
