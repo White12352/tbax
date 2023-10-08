@@ -10,6 +10,7 @@ cd ..
 go mod tidy
 cd ../sing-box-extra
 go get github.com/AntiNeko/TLS-scribe@v0.3.2
+go get github.com/codeclysm/extract v2.2.0+incompatible
 go mod tidy
 #cd ../libneko
 #go mod tidy
