@@ -3,6 +3,7 @@
 buildScript/lib/core/init.sh
 cd ..
 git clone -b dev https://github.com/SagerNet/sing-quic sing-quic
+git clone -b main https://github.com/MatsuriDayo/libneko libneko
 cd sing-box/test
 go mod tidy
 cd ..
