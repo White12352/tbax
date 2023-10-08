@@ -9,6 +9,7 @@ go mod tidy
 cd ..
 go mod tidy
 cd ../sing-box-extra
+go get github.com/AntiNeko/TLS-scribe@v0.3.2
 go mod tidy
 #cd ../libneko
 #go mod tidy
