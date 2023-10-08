@@ -10,6 +10,7 @@ git config --global user.email "you@example.com"
 git config --global user.name "Your Name"
 git remote add MatsuriDayo https://github.com/MatsuriDayo/sing-box
 git fetch MatsuriDayo 1.6.a2
+git clean -f nekoutils/callback.go
 #git cherry-pick -x -n 008b4c7
 #git cherry-pick -x -n 6ade9e8
 git cherry-pick -x -n 22afd17
