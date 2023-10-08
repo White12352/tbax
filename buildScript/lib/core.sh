@@ -6,7 +6,7 @@ git clone -b dev https://github.com/SagerNet/sing-quic sing-quic
 cd sing-box/test
 go mod tidy
 cd ..
-go mod tiyd
+go mod tidy
 cd ../sing-box-extra
 go mod tidy
 #cd ../libneko
