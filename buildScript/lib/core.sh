@@ -17,7 +17,7 @@ go get github.com/ulikunitz/xz@v0.5.10
 go get golang.org/x/mobile@v0.0.0-20220722155234-aaac322e2105
 go get github.com/sagernet/sing-quic@v0.1.2-0.20231001061659-f0ec0e24dd4d
 go mod tidy
-#cd ../libneko
-#go mod tidy
+cd ../libneko
+go mod tidy
 cd ../tbax
 buildScript/lib/core/build.sh
