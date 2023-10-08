@@ -21,6 +21,8 @@ cd ../libneko
 go mod tidy
 cd ../sing-box/test
 go mod tidy
+cd ../libcore
+go mod tidy
 cd ..
 go mod tidy
 cd ../tbax
